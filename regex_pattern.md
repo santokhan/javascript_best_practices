@@ -1,10 +1,15 @@
 # Regular Expression Pattern
 
-## Username
+## Username Regex
 
 ```python
 pattern = r"^[a-zA-Z][a-zA-Z0-9._]{2,18}$"
 ```
+
+```javascript
+const pattern = /^[a-zA-Z][a-zA-Z0-9._]{2,18}$/;
+```
+
 Usage
 
 ```python
@@ -22,12 +27,6 @@ def validate_username(self):
     if not re.match(pattern, self.username):
         raise ValueError("Username must start with a letter and can only contain letters, numbers, dots, or underscores.")
 ```
-
-```javascript
-const pattern = /^[a-zA-Z][a-zA-Z0-9._]{2,18}$/;
-```
-
-Usage
 
 ```javascript
 function validateUsername(username) {

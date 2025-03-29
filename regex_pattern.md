@@ -26,3 +26,22 @@ def validate_username(self):
 ```javascript
 const pattern = /^[a-zA-Z][a-zA-Z0-9._]{2,18}$/;
 ```
+
+Usage
+
+```
+function validateUsername(username) {
+    const pattern = /^[a-zA-Z][a-zA-Z0-9._]{2,18}$/;
+    
+    if (!username) return "Username is required.";
+    if (username.length < 3) return "Username must be at least 3 characters long.";
+    if (username.length > 19) return "Username cannot be more than 19 characters long.";
+    if (!pattern.test(username)) return "Username must start with a letter and can only contain letters, numbers, dots, or underscores.";
+    
+    return "Valid username.";
+}
+
+// Example usage:
+console.log(validateUsername("John_Doe")); // Valid username.
+console.log(validateUsername("9John")); // Error message.
+```

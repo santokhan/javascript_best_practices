@@ -75,5 +75,4 @@ useUserDashboard(user);
 
 > 🔄 **React hooks are powerful** — but too many layers of abstraction can hurt readability and maintainability.
 > **Use composition with intention, not by default.**
-
-Let me know if you'd like this turned into a markdown file or added to a project’s contribution guide.
+  

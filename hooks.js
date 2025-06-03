@@ -28,7 +28,7 @@ While React allows custom hooks to call other hooks, **overusing this pattern** 
 
 ### 🚫 What to Avoid
 
-```js
+```javascript
 function useDashboard() {
   const user = useUser();         // unrelated logic
   const posts = usePosts();       // another custom hook
@@ -44,7 +44,7 @@ function useDashboard() {
 
 ### ✅ Better Pattern
 
-```js
+```javascript
 function useUserDashboard(user) {
   const notifications = useNotify();
 

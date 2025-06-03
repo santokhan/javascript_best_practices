@@ -3,8 +3,6 @@
 **Guideline:**
 Avoid using **custom hooks inside another custom hook** unless there's a strong reason to compose them.
 
----
-
 ### Why This Matters
 
 While React allows custom hooks to call other hooks, **overusing this pattern** can lead to:
@@ -14,8 +12,6 @@ While React allows custom hooks to call other hooks, **overusing this pattern** 
 * 🧠 **Cognitive overload** for future developers trying to debug or maintain the code
 * 🧪 **Harder testing**, since hooks may indirectly rely on nested internal behavior
 
----
-
 ### Problems This Can Cause
 
 * ❌ Increased **complexity and hidden logic flow**
@@ -23,16 +19,12 @@ While React allows custom hooks to call other hooks, **overusing this pattern** 
 * ❌ Reduced **reusability** of smaller logic units
 * ❌ More difficult to **refactor or isolate** specific logic later
 
----
-
 ### Prefer This Approach
 
 * ✅ Keep custom hooks **focused and isolated** in responsibility
 * ✅ Use **composition cautiously**, only when hooks are naturally related
 * ✅ Extract shared logic into **utilities** or **simple functions** when possible
 * ✅ Flatten logic to improve readability and **explicitness**
-
----
 
 ### 🚫 What to Avoid
 
@@ -49,8 +41,6 @@ function useDashboard() {
   }, [user, posts]);
 }
 ```
-
----
 
 ### ✅ Better Pattern
 
@@ -70,8 +60,6 @@ const user = useUser();
 const posts = usePosts();
 useUserDashboard(user);
 ```
-
----
 
 > 🔄 **React hooks are powerful** — but too many layers of abstraction can hurt readability and maintainability.
 > **Use composition with intention, not by default.**
